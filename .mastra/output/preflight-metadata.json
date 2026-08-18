@@ -1,0 +1,1 @@
+{"version":1,"localPaths":[{"value":"file:./mastra.db","hint":"LibSQL/SQLite file path relative to the build host","module":"/Users/benny/Downloads/mastra_app/src/mastra/index.ts","guardedBy":"TURSO_DATABASE_URL"}],"userEnvRefs":["TURSO_AUTH_TOKEN","TURSO_DATABASE_URL","ZENROWS_API_KEY"]}
