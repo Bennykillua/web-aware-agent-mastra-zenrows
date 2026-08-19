@@ -5,7 +5,7 @@ export const zenrowsFetchTool = createTool({
   id: 'zenrows-fetch',
 
   description:
-  'Fetches web pages using ZenRows. Use this tool when you need information from a specific URL. Set extractJson to true when you need structured data such as product details, pricing, availability, ratings, or other fields. Leave extractJson false when you need the page content as Markdown.',
+  'Fetches web pages using Zenrows. Use this tool when you need information from a specific URL. Set extractJson to true when you need structured data such as product details, pricing, availability, ratings, or other fields. Leave extractJson false when you need the page content as Markdown.',
 
   inputSchema: z.object({
     url: z.string().url(),
@@ -40,7 +40,7 @@ export const zenrowsFetchTool = createTool({
       const error = await response.text();
 
       throw new Error(
-        `ZenRows request failed with status ${response.status}: ${error}`,
+        `Zenrows request failed with status ${response.status}: ${error}`,
       );
     }
 
