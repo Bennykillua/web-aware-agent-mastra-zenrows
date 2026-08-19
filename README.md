@@ -135,7 +135,7 @@ Field names in extracted output vary by page type. Search pages and browse pages
 
 ## Troubleshooting
 
-**402 with `AUTH010`** — `extract=auto` is not enabled for that domain on your account. Contact Zenrows support to request access, or use the Markdown path instead.
+**402 with `AUTH010`** — `extract=auto` is not enabled for that domain on your account. Contact Zenrows support to request access, or use the Markdown path instead. Alternatively, check out the `extract=auto` docs [here](https://docs.zenrows.com/extract/setup)
 
 **401 from Zenrows** — `ZENROWS_API_KEY` is missing from `.env`. The tool sends the value as-is, so an unset variable reaches the API as an invalid key.
 
