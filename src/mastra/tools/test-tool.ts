@@ -1,9 +1,25 @@
 import 'dotenv/config';
 import { zenrowsFetchTool } from './zenrows-fetch';
 
-const result = await zenrowsFetchTool.execute({
-  url: 'https://www.walmart.com/search?q=bike',
-});
+if (!zenrowsFetchTool.execute) {
+  throw new Error('ZenRows tool does not have an execute function');
+}
+
+const result = await zenrowsFetchTool.execute(
+  {
+    url: 'https://www.walmart.com/search?q=bike',
+    extractJson: false,
+  },
+  {} as any
+);
+
+if (!result || 'statusCode' in result === false) {
+  throw new Error('ZenRows tool returned an unexpected result');
+}
 
 console.log(result.statusCode);
-console.log(result.content.slice(0, 300));
+console.log(
+  typeof result.content === 'string'
+    ? result.content.slice(0, 300)
+    : result.content
+);
